@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhance your Blender workflow with AI-powered MCP capabilities">
+    <title>Blender AI - Transform Your 3D Design Workflow</title>
+    <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navigation" role="navigation">
+        <div class="navigation__container">
+            <div class="navigation__logo">
+                <h1 class="navigation__title">Blender AI</h1>
+            </div>
+            <ul class="navigation__menu">
+                <li><a href="#features" class="navigation__link">Features</a></li>
+                <li><a href="#cta" class="navigation__link">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="region" aria-label="Hero section">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h2 class="hero__title">{{data:hero.title}}</h2>
+                    <p class="hero__subtitle">{{data:hero.subtitle}}</p>
+                    <a href="#features" class="hero__cta button">Get Started</a>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__gradient"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" role="region" aria-label="Features section">
+            <div class="features__container">
+                <h2 class="features__heading">{{data:features.heading}}</h2>
+                <p class="features__description">{{data:features.description}}</p>
+                
+                <div class="features__grid">
+                    {{#each data:features.features}}
+                    <div class="features__card">
+                        <div class="features__icon">{{this.icon}}</div>
+                        <h3 class="features__card-title">{{this.title}}</h3>
+                        <p class="features__card-description">{{this.description}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta" role="region" aria-label="Call to action section">
+            <div class="cta-section__container">
+                <h2 class="cta-section__heading">{{data:cta.heading}}</h2>
+                <p class="cta-section__description">{{data:cta.description}}</p>
+                <a href="{{data:cta.button_link}}" class="cta-section__button button button--primary">{{data:cta.button_text}}</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2026 Blender AI. All rights reserved.</p>
+            <p class="footer__credit">Built with Orlando Studio</p>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
